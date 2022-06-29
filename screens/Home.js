@@ -4,7 +4,7 @@
   
   //local imports 
   import { COLORS, NFTData} from "../constants";
- import {FocusedStatusBar, HomeHeader, NFTCard} from '../components'
+  import {FocusedStatusBar, HomeHeader, NFTCard} from '../components'
 
   const Home = () => {
     return(
