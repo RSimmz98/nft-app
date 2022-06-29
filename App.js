@@ -5,7 +5,6 @@
 
  import Home from './screens/Home'
  import Details from './screens/Details'
- import {NFTCard, HomeHeader, FocusedStatusBar} from '../components';
  const Stack = createStackNavigator();
 
  const theme = {
