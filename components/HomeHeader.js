@@ -1,10 +1,10 @@
-import React from 'React'
+import React from 'react'
 import {Text, View} from 'react-native'
 
   const HomeHeader = () =>{
     return (
     <View>
-        <Text>STATUS BAR</Text>
+        <Text>HomeHeader</Text>
     </View>
     )
 }
