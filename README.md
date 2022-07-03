@@ -3,7 +3,7 @@
 <h2>Ingridients</h2>
 <ul>
   <li>React-native</li>
-  <li>javascripy</li>
+  <li>javascript</li>
   <li>expo</li>
 </ul>
 
