@@ -2,12 +2,13 @@ import React from 'react'
 import { View, Text, SafeAreaView, Image, StatusBar, Flastlist } from 'react-native'
 
 import { COLORS, SIZES, SHADOWS, FONTS, assets } from '../constants';
-import { CircleButton, RectButton, SubInfo, FocusedStatusBar, 
-       DetailsDesc, DetailsbID } from '../components'
+import { CircleButton, RectButton, SubInfo, FocusedStatusBar, DetailsDesc, DetailsBid } from '../components';
 
   const Details = ({ route, navigation}) => {
+    const { data } = route.params;
+
     return(
-    <SafeAreaView>
+    <SafeAreaView style={{ flex: 1}}>
       <FocusedStatusBar 
         barStyle="dark-content"
         backgroundColor="transparent"
@@ -20,15 +21,22 @@ import { CircleButton, RectButton, SubInfo, FocusedStatusBar,
            bottom: 0,
            paddingVertical: SIZES.font,
            justifyContent: 'center',
-           backgroundColor: 'rgba(255,255,0.5)',
+           backgroundColor: 'rgba(255,255,255,0.5)',
            zindex: 1,
     }}
       >
         <RectButton 
           minWidth={170}
-          fontSize={SIZES.larger}
+          fontSize={SIZES.large}
            {...SHADOWS.dark} />
       </View>
+      <Flastlist 
+        data={data.bids}
+        renderItem={({item}) => <DetailsBid bid={item}/>}
+        keyExtractor={(item) => item.id}
+        showsVerticalScrollIndicator={false}
+        contentContainerStyle={{ paddingBottom: SIZES.extraLarge * 3}}
+        />
     </SafeAreaView>
   )
 }
